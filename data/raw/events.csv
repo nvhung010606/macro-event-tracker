@@ -1,0 +1,24 @@
+event_date,event_name,category,subtype,expected,actual,notes
+2024-11-13,CPI,inflation,CPI YoY,,,October 2024 data
+2024-12-11,CPI,inflation,CPI YoY,,,November 2024 data
+2025-01-15,CPI,inflation,CPI YoY,,,December 2024 data
+2025-02-12,CPI,inflation,CPI YoY,,,January 2025 data
+2025-03-12,CPI,inflation,CPI YoY,,,February 2025 data
+2025-04-10,CPI,inflation,CPI YoY,,,March 2025 data
+2025-05-13,CPI,inflation,CPI YoY,,,April 2025 data
+2025-06-11,CPI,inflation,CPI YoY,,,May 2025 data
+2025-07-15,CPI,inflation,CPI YoY,,,June 2025 data
+2025-08-12,CPI,inflation,CPI YoY,,,July 2025 data
+2025-09-11,CPI,inflation,CPI YoY,,,August 2025 data
+2025-10-24,CPI,inflation,CPI YoY,,,September 2025 data
+2024-09-18,FOMC Meeting,monetary_policy,interest_rate_decision,,,-50 bps rate cut; 2-day meeting (Sep 17-18) with SEP
+2024-11-07,FOMC Meeting,monetary_policy,interest_rate_decision,,,-25 bps rate cut; 2-day meeting (Nov 6-7)
+2024-12-18,FOMC Meeting,monetary_policy,interest_rate_decision,,,-25 bps rate cut; 2-day meeting (Dec 17-18) with SEP
+2025-01-29,FOMC Meeting,monetary_policy,interest_rate_decision,,,Rate held steady at 4.25-4.50%; 2-day meeting (Jan 28-29)
+2025-03-19,FOMC Meeting,monetary_policy,interest_rate_decision,,,Rate held steady; 2-day meeting (Mar 18-19) with SEP
+2025-05-07,FOMC Meeting,monetary_policy,interest_rate_decision,,,Rate held steady; 2-day meeting (May 6-7)
+2025-06-18,FOMC Meeting,monetary_policy,interest_rate_decision,,,Rate held steady; 2-day meeting (Jun 17-18) with SEP
+2025-07-30,FOMC Meeting,monetary_policy,interest_rate_decision,,,Rate held steady at 4.25-4.50%; 2-day meeting (Jul 29-30)
+2025-09-17,FOMC Meeting,monetary_policy,interest_rate_decision,,,Rate held steady; 2-day meeting (Sep 16-17) with SEP
+2025-10-29,FOMC Meeting,monetary_policy,interest_rate_decision,,,2-day meeting (Oct 28-29)
+2025-12-10,FOMC Meeting,monetary_policy,interest_rate_decision,,,2-day meeting (Dec 9-10) with SEP
