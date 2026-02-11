@@ -71,7 +71,7 @@ def create_historical_narrative():
             'name': 'ACT 1: COVID Hangover',
             'start': '2021-01-01',
             'end': '2022-02-28',
-            'color': '#1a3a2a',
+            'color': "#03914a",
             'description': '"Transitory" inflation',
             'y_pos': 0.95
         },
@@ -79,7 +79,7 @@ def create_historical_narrative():
             'name': 'ACT 2: The Panic',
             'start': '2022-03-01',
             'end': '2022-06-30',
-            'color': '#3a3020',
+            'color': "#c2821b",
             'description': 'Inflation hits 9%',
             'y_pos': 0.90
         },
@@ -87,7 +87,7 @@ def create_historical_narrative():
             'name': 'ACT 3: Fastest Hikes in History',
             'start': '2022-07-01',
             'end': '2023-07-31',
-            'color': '#3a1a1a',
+            'color': "#7d2020",
             'description': '0% → 5.33% in 16 months',
             'y_pos': 0.85
         },
@@ -95,7 +95,7 @@ def create_historical_narrative():
             'name': 'ACT 4: The Long Pause',
             'start': '2023-08-01',
             'end': '2024-09-01',
-            'color': '#1a2a3a',
+            'color': "#1e4a77",
             'description': '"Higher for longer"',
             'y_pos': 0.80
         },
@@ -103,7 +103,7 @@ def create_historical_narrative():
             'name': 'ACT 5: The Pivot',
             'start': '2024-09-01',
             'end': '2026-01-01',
-            'color': '#1a3a2a',
+            'color': "#1c6b43",
             'description': 'Cutting cycle begins',
             'y_pos': 0.75
         }
@@ -114,7 +114,7 @@ def create_historical_narrative():
     fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(16, 12),
                                          gridspec_kw={'height_ratios': [2, 1.5, 1.5]})
 
-    fig.suptitle('Zero to Five and Back: The 2021-2025 Fed Cycle\n' +
+    fig.suptitle('The 2021-2025 Fed Cycle\n' +
                  'The Most Dramatic Monetary Policy Shift in 40+ Years',
                  fontsize=20, fontweight='bold', y=0.995)
 
@@ -123,12 +123,19 @@ def create_historical_narrative():
     # ================================================================
     print("\n📈 Panel 1: Fed Funds Rate...")
 
-    # Draw act backgrounds
+    # Draw act backgrounds with labels
     for act in acts:
         act_start = pd.Timestamp(act['start'])
         act_end = pd.Timestamp(act['end'])
-        ax1.axvspan(act_start, act_end, alpha=0.3, color=act['color'],
-                    label=act['name'].split(':')[1].strip())
+        ax1.axvspan(act_start, act_end, alpha=0.3, color=act['color'])
+
+        # Add act label directly on the graph
+        act_mid = act_start + (act_end - act_start) / 2
+        ax1.text(act_mid, 5.7, act['name'].split(':')[1].strip(),
+                ha='center', va='top', fontsize=10, fontweight='bold',
+                color='white', alpha=0.9,
+                bbox=dict(boxstyle='round,pad=0.3', facecolor=act['color'],
+                         edgecolor='white', linewidth=1, alpha=0.7))
 
     # Plot Fed Funds Rate
     if 'rate' in events_df.columns:
@@ -178,6 +185,9 @@ def create_historical_narrative():
     ax1.set_ylabel('Fed Funds Rate (%)', fontsize=12, fontweight='bold')
     ax1.set_ylim(-0.2, 6)
     ax1.grid(True, alpha=0.3)
+    # Add legend for Fed Funds Rate line only
+    ax1.plot([], [], linewidth=3, color='#00bfff', marker='o', markersize=6,
+            label='Fed Funds Rate')
     ax1.legend(loc='upper left', fontsize=9, framealpha=0.9)
 
     # ================================================================
@@ -185,11 +195,19 @@ def create_historical_narrative():
     # ================================================================
     print("📊 Panel 2: Market reactions...")
 
-    # Draw act backgrounds
+    # Draw act backgrounds with labels
     for act in acts:
         act_start = pd.Timestamp(act['start'])
         act_end = pd.Timestamp(act['end'])
         ax2.axvspan(act_start, act_end, alpha=0.3, color=act['color'])
+
+        # Add act label
+        act_mid = act_start + (act_end - act_start) / 2
+        ax2.text(act_mid, 185, act['name'].split(':')[1].strip(),
+                ha='center', va='top', fontsize=9, fontweight='bold',
+                color='white', alpha=0.9,
+                bbox=dict(boxstyle='round,pad=0.3', facecolor=act['color'],
+                         edgecolor='white', linewidth=1, alpha=0.7))
 
     # Plot SPX (normalized to 100 at start)
     spx_max = 140  # default
@@ -238,11 +256,19 @@ def create_historical_narrative():
     # ================================================================
     print("📉 Panel 3: Economic context...")
 
-    # Draw act backgrounds
+    # Draw act backgrounds with labels
     for act in acts:
         act_start = pd.Timestamp(act['start'])
         act_end = pd.Timestamp(act['end'])
         ax3.axvspan(act_start, act_end, alpha=0.3, color=act['color'])
+
+        # Add act label
+        act_mid = act_start + (act_end - act_start) / 2
+        ax3.text(act_mid, 9.7, act['name'].split(':')[1].strip(),
+                ha='center', va='top', fontsize=9, fontweight='bold',
+                color='white', alpha=0.9,
+                bbox=dict(boxstyle='round,pad=0.3', facecolor=act['color'],
+                         edgecolor='white', linewidth=1, alpha=0.7))
 
     # Simulate inflation data (in real version, you'd fetch from FRED)
     # Creating stylized inflation narrative
@@ -308,12 +334,8 @@ def create_historical_narrative():
         ax.xaxis.set_major_locator(mdates.MonthLocator(interval=3))
         plt.setp(ax.xaxis.get_majorticklabels(), rotation=45, ha='right')
 
-    # Add act labels at the bottom
-    act_text = "   |   ".join([f"{act['name'].split(':')[1].strip()}" for act in acts])
-    fig.text(0.5, 0.02, act_text, ha='center', fontsize=10,
-            style='italic', color='#888888')
-
-    plt.tight_layout(rect=[0, 0.03, 1, 0.99])
+    # Note: Act labels now integrated directly on each panel
+    plt.tight_layout(rect=[0, 0.01, 1, 0.99])
 
     # Save
     os.makedirs(OUTPUT_DIR, exist_ok=True)

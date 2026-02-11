@@ -54,13 +54,20 @@ def fetch_yahoo_data(ticker, start_date):
         data = yf.download(ticker, start=start_date, progress=False)
         if len(data) == 0:
             return None
-        # Return closing prices
+
+        # Return closing prices as a Series
         if 'Close' in data.columns:
-            return data['Close']
+            result = data['Close']
         elif isinstance(data.columns, pd.MultiIndex):
-            return data[('Close', ticker)]
+            result = data[('Close', ticker)]
         else:
-            return data.iloc[:, 0]  # First column
+            result = data.iloc[:, 0]  # First column
+
+        # Ensure it's a Series with DatetimeIndex
+        if isinstance(result, pd.DataFrame):
+            result = result.squeeze()  # Convert single-column DataFrame to Series
+
+        return result
     except Exception as e:
         print(f"   ⚠️  Error fetching {ticker}: {e}")
         return None
@@ -146,21 +153,26 @@ def update_market_data():
 
     # Combine into DataFrame
     print("\n🔄 Combining data...")
-    df = pd.DataFrame({
-        'date': spx.index,
-        'spx': spx.values
-    })
+
+    # Start with SPX (convert Series to DataFrame)
+    df = spx.reset_index()
+    df.columns = ['date', 'spx']
+    df['date'] = pd.to_datetime(df['date'])
 
     if vix is not None:
-        df = df.merge(pd.DataFrame({'date': vix.index, 'vix': vix.values}),
-                     on='date', how='left')
+        vix_df = vix.reset_index()
+        vix_df.columns = ['date', 'vix']
+        vix_df['date'] = pd.to_datetime(vix_df['date'])
+        df = df.merge(vix_df, on='date', how='left')
 
     if y10 is not None:
-        df = df.merge(pd.DataFrame({'date': y10.index, 'y10': y10.values}),
-                     on='date', how='left')
+        y10_df = y10.reset_index()
+        y10_df.columns = ['date', 'y10']
+        y10_df['date'] = pd.to_datetime(y10_df['date'])
+        df = df.merge(y10_df, on='date', how='left')
 
     # Forward fill missing values (markets closed on weekends)
-    df = df.fillna(method='ffill')
+    df = df.ffill()
 
     # Calculate features
     df = calculate_features(df)

@@ -1,6 +1,15 @@
 """
 Full Pipeline Orchestrator
 Runs the complete macro-event-tracker pipeline
+
+Generates:
+- Updated market data (SPX, VIX, Treasury yields)
+- Fed event detection and classification
+- Event panel with market reactions
+- Historical narrative visualization (2021-2025 Fed cycle)
+- Forecast models for next FOMC meeting (if within 60 days)
+- Economic vs CME Market comparison chart
+
 Use this after FOMC meetings to update everything automatically
 """
 import subprocess
@@ -111,7 +120,7 @@ def main():
         "Step 4: Generate historical narrative visualization"
     )
 
-    # Step 5: Update forecasts (optional - only if next meeting is soon)
+    # Step 5: Update forecasts
     next_meeting = get_next_fomc_meeting()
     if next_meeting:
         days_until = (next_meeting - pd.Timestamp.now()).days
@@ -119,10 +128,25 @@ def main():
 
         if days_until <= 60:  # Update forecast if meeting is within 60 days
             log("🔮 Running forecast update...")
-            results['forecast'] = run_script(
+            results['forecast_dynamic'] = run_script(
                 "forecast_dynamic.py",
-                "Step 5: Update forecast for next FOMC meeting"
+                "Step 5a: Generate dynamic forecast for next meeting"
             )
+
+            results['forecast_ensemble'] = run_script(
+                "forecast_ensemble.py",
+                "Step 5b: Generate ensemble forecast"
+            )
+
+            # Step 6: Generate forecast comparison chart
+            results['comparison_chart'] = run_script(
+                "visualize_comparison.py",
+                "Step 6: Generate Economic vs CME Market comparison chart"
+            )
+        else:
+            log(f"⏭️  Skipping forecast (meeting is {days_until} days away, only update within 60 days)")
+    else:
+        log("⚠️  No upcoming FOMC meetings found in schedule")
 
     # Summary
     log("\n" + "="*70)

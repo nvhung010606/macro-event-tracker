@@ -32,10 +32,23 @@ FOMC_MEETINGS = [
 def get_rate_changes():
     """Get actual rate changes from FEDFUNDS series"""
     api_key = os.getenv("FRED_API_KEY")
+
+    # Try to load from config.py if not in environment
     if not api_key:
+        try:
+            import sys
+            sys.path.insert(0, os.path.dirname(__file__))
+            from config import FRED_API_KEY
+            api_key = FRED_API_KEY
+        except:
+            pass
+
+    if not api_key or api_key == "YOUR_KEY_HERE":
         raise SystemExit(
-            "Missing FRED_API_KEY. In the terminal run:\n"
-            "export FRED_API_KEY='YOUR_KEY'"
+            "Missing FRED_API_KEY. Either:\n"
+            "1. Edit src/config.py and add your key\n"
+            "2. Or run: export FRED_API_KEY='YOUR_KEY'\n"
+            "Get a free key at: https://fred.stlouisfed.org/docs/api/api_key.html"
         )
     
     fred = Fred(api_key=api_key)

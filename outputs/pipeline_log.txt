@@ -70,3 +70,550 @@ export FRED_API_KEY='YOUR_KEY'
 [2026-02-10 19:00:19] 
 🎯 Overall: 3/5 steps completed successfully
 [2026-02-10 19:00:19] ❌ PIPELINE FAILED - CRITICAL ERRORS
+[2026-02-10 19:02:25] 
+======================================================================
+[2026-02-10 19:02:25] 🚀 AUTOMATED PIPELINE EXECUTION
+[2026-02-10 19:02:25] ======================================================================
+[2026-02-10 19:02:25] Started: 2026-02-10 19:02:25
+[2026-02-10 19:02:25] 
+======================================================================
+[2026-02-10 19:02:25] ▶️  Running: Step 1: Update market data (SPX, VIX, yields)
+[2026-02-10 19:02:25] ======================================================================
+[2026-02-10 19:02:27] ❌ Step 1: Update market data (SPX, VIX, yields) - FAILED
+[2026-02-10 19:02:27] Error: Traceback (most recent call last):
+  File "/Users/nguyenviethung/Desktop/macro-event-tracker/src/update_market_data.py", line 199, in <module>
+    main()
+  File "/Users/nguyenviethung/Desktop/macro-event-tracker/src/update_market_data.py", line 195, in main
+    success = update_market_data()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nguyenviethung/Desktop/macro-event-tracker/src/update_market_data.py", line 149, in update_market_data
+    df = pd.DataFrame({
+         ^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/frame.py", line 778, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 503, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ, consolidate=copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 114, in arrays_to_mgr
+    index = _extract_index(arrays)
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 664, in _extract_index
+    raise ValueError("Per-column arrays must each be 1-dimensional")
+ValueError: Per-column arrays must each be 1-dimensional
+
+[2026-02-10 19:02:27] 
+⚠️  Market data update failed - continuing anyway...
+[2026-02-10 19:02:27] 
+======================================================================
+[2026-02-10 19:02:27] ▶️  Running: Step 2: Detect Fed events and rate changes
+[2026-02-10 19:02:27] ======================================================================
+[2026-02-10 19:02:27] ❌ Step 2: Detect Fed events and rate changes - FAILED
+[2026-02-10 19:02:27] Error: Missing FRED_API_KEY. In the terminal run:
+export FRED_API_KEY='YOUR_KEY'
+
+[2026-02-10 19:02:27] 
+======================================================================
+[2026-02-10 19:02:27] ▶️  Running: Step 3: Join events with market data
+[2026-02-10 19:02:27] ======================================================================
+[2026-02-10 19:02:28] ✅ Step 3: Join events with market data - SUCCESS
+[2026-02-10 19:02:28] 
+======================================================================
+[2026-02-10 19:02:28] ▶️  Running: Step 4: Generate historical narrative visualization
+[2026-02-10 19:02:28] ======================================================================
+[2026-02-10 19:02:29] ✅ Step 4: Generate historical narrative visualization - SUCCESS
+[2026-02-10 19:02:29] 
+📅 Next FOMC meeting: 2026-03-18 (35 days)
+[2026-02-10 19:02:29] 🔮 Running forecast update...
+[2026-02-10 19:02:29] 
+======================================================================
+[2026-02-10 19:02:29] ▶️  Running: Step 5: Update forecast for next FOMC meeting
+[2026-02-10 19:02:29] ======================================================================
+[2026-02-10 19:02:31] ✅ Step 5: Update forecast for next FOMC meeting - SUCCESS
+[2026-02-10 19:02:31] 
+======================================================================
+[2026-02-10 19:02:31] 📊 PIPELINE SUMMARY
+[2026-02-10 19:02:31] ======================================================================
+[2026-02-10 19:02:31] ❌ Market Data: FAILED
+[2026-02-10 19:02:31] ❌ Fed Events: FAILED
+[2026-02-10 19:02:31] ✅ Join Data: SUCCESS
+[2026-02-10 19:02:31] ✅ Plot Narrative: SUCCESS
+[2026-02-10 19:02:31] ✅ Forecast: SUCCESS
+[2026-02-10 19:02:31] 
+🎯 Overall: 3/5 steps completed successfully
+[2026-02-10 19:02:31] ❌ PIPELINE FAILED - CRITICAL ERRORS
+[2026-02-10 19:06:35] 
+======================================================================
+[2026-02-10 19:06:35] 🚀 AUTOMATED PIPELINE EXECUTION
+[2026-02-10 19:06:35] ======================================================================
+[2026-02-10 19:06:35] Started: 2026-02-10 19:06:35
+[2026-02-10 19:06:35] 
+======================================================================
+[2026-02-10 19:06:35] ▶️  Running: Step 1: Update market data (SPX, VIX, yields)
+[2026-02-10 19:06:35] ======================================================================
+[2026-02-10 19:06:36] ❌ Step 1: Update market data (SPX, VIX, yields) - FAILED
+[2026-02-10 19:06:36] Error: Traceback (most recent call last):
+  File "/Users/nguyenviethung/Desktop/macro-event-tracker/src/update_market_data.py", line 205, in <module>
+    main()
+  File "/Users/nguyenviethung/Desktop/macro-event-tracker/src/update_market_data.py", line 201, in main
+    success = update_market_data()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nguyenviethung/Desktop/macro-event-tracker/src/update_market_data.py", line 149, in update_market_data
+    df = pd.DataFrame({
+         ^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/frame.py", line 778, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 503, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ, consolidate=copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 114, in arrays_to_mgr
+    index = _extract_index(arrays)
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 664, in _extract_index
+    raise ValueError("Per-column arrays must each be 1-dimensional")
+ValueError: Per-column arrays must each be 1-dimensional
+
+[2026-02-10 19:06:36] 
+⚠️  Market data update failed - continuing anyway...
+[2026-02-10 19:06:36] 
+======================================================================
+[2026-02-10 19:06:36] ▶️  Running: Step 2: Detect Fed events and rate changes
+[2026-02-10 19:06:36] ======================================================================
+[2026-02-10 19:06:37] ✅ Step 2: Detect Fed events and rate changes - SUCCESS
+[2026-02-10 19:06:37] 
+======================================================================
+[2026-02-10 19:06:37] ▶️  Running: Step 3: Join events with market data
+[2026-02-10 19:06:37] ======================================================================
+[2026-02-10 19:06:37] ✅ Step 3: Join events with market data - SUCCESS
+[2026-02-10 19:06:37] 
+======================================================================
+[2026-02-10 19:06:37] ▶️  Running: Step 4: Generate historical narrative visualization
+[2026-02-10 19:06:37] ======================================================================
+[2026-02-10 19:06:39] ✅ Step 4: Generate historical narrative visualization - SUCCESS
+[2026-02-10 19:06:39] 
+📅 Next FOMC meeting: 2026-03-18 (35 days)
+[2026-02-10 19:06:39] 🔮 Running forecast update...
+[2026-02-10 19:06:39] 
+======================================================================
+[2026-02-10 19:06:39] ▶️  Running: Step 5: Update forecast for next FOMC meeting
+[2026-02-10 19:06:39] ======================================================================
+[2026-02-10 19:06:41] ✅ Step 5: Update forecast for next FOMC meeting - SUCCESS
+[2026-02-10 19:06:41] 
+======================================================================
+[2026-02-10 19:06:41] 📊 PIPELINE SUMMARY
+[2026-02-10 19:06:41] ======================================================================
+[2026-02-10 19:06:41] ❌ Market Data: FAILED
+[2026-02-10 19:06:41] ✅ Fed Events: SUCCESS
+[2026-02-10 19:06:41] ✅ Join Data: SUCCESS
+[2026-02-10 19:06:41] ✅ Plot Narrative: SUCCESS
+[2026-02-10 19:06:41] ✅ Forecast: SUCCESS
+[2026-02-10 19:06:41] 
+🎯 Overall: 4/5 steps completed successfully
+[2026-02-10 19:06:41] ⚠️  PIPELINE COMPLETE - SOME WARNINGS
+[2026-02-10 19:08:47] 
+======================================================================
+[2026-02-10 19:08:47] 🚀 AUTOMATED PIPELINE EXECUTION
+[2026-02-10 19:08:47] ======================================================================
+[2026-02-10 19:08:47] Started: 2026-02-10 19:08:47
+[2026-02-10 19:08:47] 
+======================================================================
+[2026-02-10 19:08:47] ▶️  Running: Step 1: Update market data (SPX, VIX, yields)
+[2026-02-10 19:08:47] ======================================================================
+[2026-02-10 19:08:49] ✅ Step 1: Update market data (SPX, VIX, yields) - SUCCESS
+[2026-02-10 19:08:49] 
+======================================================================
+[2026-02-10 19:08:49] ▶️  Running: Step 2: Detect Fed events and rate changes
+[2026-02-10 19:08:49] ======================================================================
+[2026-02-10 19:08:49] ✅ Step 2: Detect Fed events and rate changes - SUCCESS
+[2026-02-10 19:08:49] 
+======================================================================
+[2026-02-10 19:08:49] ▶️  Running: Step 3: Join events with market data
+[2026-02-10 19:08:49] ======================================================================
+[2026-02-10 19:08:50] ✅ Step 3: Join events with market data - SUCCESS
+[2026-02-10 19:08:50] 
+======================================================================
+[2026-02-10 19:08:50] ▶️  Running: Step 4: Generate historical narrative visualization
+[2026-02-10 19:08:50] ======================================================================
+[2026-02-10 19:08:52] ✅ Step 4: Generate historical narrative visualization - SUCCESS
+[2026-02-10 19:08:52] 
+📅 Next FOMC meeting: 2026-03-18 (35 days)
+[2026-02-10 19:08:52] 🔮 Running forecast update...
+[2026-02-10 19:08:52] 
+======================================================================
+[2026-02-10 19:08:52] ▶️  Running: Step 5: Update forecast for next FOMC meeting
+[2026-02-10 19:08:52] ======================================================================
+[2026-02-10 19:08:54] ✅ Step 5: Update forecast for next FOMC meeting - SUCCESS
+[2026-02-10 19:08:54] 
+======================================================================
+[2026-02-10 19:08:54] 📊 PIPELINE SUMMARY
+[2026-02-10 19:08:54] ======================================================================
+[2026-02-10 19:08:54] ✅ Market Data: SUCCESS
+[2026-02-10 19:08:54] ✅ Fed Events: SUCCESS
+[2026-02-10 19:08:54] ✅ Join Data: SUCCESS
+[2026-02-10 19:08:54] ✅ Plot Narrative: SUCCESS
+[2026-02-10 19:08:54] ✅ Forecast: SUCCESS
+[2026-02-10 19:08:54] 
+🎯 Overall: 5/5 steps completed successfully
+[2026-02-10 19:08:54] ✅ PIPELINE COMPLETE - ALL SYSTEMS OPERATIONAL
+[2026-02-10 20:37:17] 
+======================================================================
+[2026-02-10 20:37:17] 🚀 AUTOMATED PIPELINE EXECUTION
+[2026-02-10 20:37:17] ======================================================================
+[2026-02-10 20:37:17] Started: 2026-02-10 20:37:17
+[2026-02-10 20:37:17] 
+======================================================================
+[2026-02-10 20:37:17] ▶️  Running: Step 1: Update market data (SPX, VIX, yields)
+[2026-02-10 20:37:17] ======================================================================
+[2026-02-10 20:37:20] ✅ Step 1: Update market data (SPX, VIX, yields) - SUCCESS
+[2026-02-10 20:37:20] 
+======================================================================
+[2026-02-10 20:37:20] ▶️  Running: Step 2: Detect Fed events and rate changes
+[2026-02-10 20:37:20] ======================================================================
+[2026-02-10 20:37:20] ✅ Step 2: Detect Fed events and rate changes - SUCCESS
+[2026-02-10 20:37:20] 
+======================================================================
+[2026-02-10 20:37:20] ▶️  Running: Step 3: Join events with market data
+[2026-02-10 20:37:20] ======================================================================
+[2026-02-10 20:37:21] ✅ Step 3: Join events with market data - SUCCESS
+[2026-02-10 20:37:21] 
+======================================================================
+[2026-02-10 20:37:21] ▶️  Running: Step 4: Generate historical narrative visualization
+[2026-02-10 20:37:21] ======================================================================
+[2026-02-10 20:37:24] ✅ Step 4: Generate historical narrative visualization - SUCCESS
+[2026-02-10 20:37:24] 
+📅 Next FOMC meeting: 2026-03-18 (35 days)
+[2026-02-10 20:37:24] 🔮 Running forecast update...
+[2026-02-10 20:37:24] 
+======================================================================
+[2026-02-10 20:37:24] ▶️  Running: Step 5: Update forecast for next FOMC meeting
+[2026-02-10 20:37:24] ======================================================================
+[2026-02-10 20:37:25] ✅ Step 5: Update forecast for next FOMC meeting - SUCCESS
+[2026-02-10 20:37:25] 
+======================================================================
+[2026-02-10 20:37:25] 📊 PIPELINE SUMMARY
+[2026-02-10 20:37:25] ======================================================================
+[2026-02-10 20:37:25] ✅ Market Data: SUCCESS
+[2026-02-10 20:37:25] ✅ Fed Events: SUCCESS
+[2026-02-10 20:37:25] ✅ Join Data: SUCCESS
+[2026-02-10 20:37:25] ✅ Plot Narrative: SUCCESS
+[2026-02-10 20:37:25] ✅ Forecast: SUCCESS
+[2026-02-10 20:37:25] 
+🎯 Overall: 5/5 steps completed successfully
+[2026-02-10 20:37:25] ✅ PIPELINE COMPLETE - ALL SYSTEMS OPERATIONAL
+[2026-02-10 20:42:29] 
+======================================================================
+[2026-02-10 20:42:29] 🚀 AUTOMATED PIPELINE EXECUTION
+[2026-02-10 20:42:29] ======================================================================
+[2026-02-10 20:42:29] Started: 2026-02-10 20:42:29
+[2026-02-10 20:42:29] 
+======================================================================
+[2026-02-10 20:42:29] ▶️  Running: Step 1: Update market data (SPX, VIX, yields)
+[2026-02-10 20:42:29] ======================================================================
+[2026-02-10 20:42:32] ✅ Step 1: Update market data (SPX, VIX, yields) - SUCCESS
+[2026-02-10 20:42:32] 
+======================================================================
+[2026-02-10 20:42:32] ▶️  Running: Step 2: Detect Fed events and rate changes
+[2026-02-10 20:42:32] ======================================================================
+[2026-02-10 20:42:32] ✅ Step 2: Detect Fed events and rate changes - SUCCESS
+[2026-02-10 20:42:32] 
+======================================================================
+[2026-02-10 20:42:32] ▶️  Running: Step 3: Join events with market data
+[2026-02-10 20:42:32] ======================================================================
+[2026-02-10 20:42:33] ✅ Step 3: Join events with market data - SUCCESS
+[2026-02-10 20:42:33] 
+======================================================================
+[2026-02-10 20:42:33] ▶️  Running: Step 4: Generate historical narrative visualization
+[2026-02-10 20:42:33] ======================================================================
+[2026-02-10 20:42:35] ✅ Step 4: Generate historical narrative visualization - SUCCESS
+[2026-02-10 20:42:35] 
+📅 Next FOMC meeting: 2026-03-18 (35 days)
+[2026-02-10 20:42:35] 🔮 Running forecast update...
+[2026-02-10 20:42:35] 
+======================================================================
+[2026-02-10 20:42:35] ▶️  Running: Step 5: Update forecast for next FOMC meeting
+[2026-02-10 20:42:35] ======================================================================
+[2026-02-10 20:42:36] ✅ Step 5: Update forecast for next FOMC meeting - SUCCESS
+[2026-02-10 20:42:36] 
+======================================================================
+[2026-02-10 20:42:36] 📊 PIPELINE SUMMARY
+[2026-02-10 20:42:36] ======================================================================
+[2026-02-10 20:42:36] ✅ Market Data: SUCCESS
+[2026-02-10 20:42:36] ✅ Fed Events: SUCCESS
+[2026-02-10 20:42:36] ✅ Join Data: SUCCESS
+[2026-02-10 20:42:36] ✅ Plot Narrative: SUCCESS
+[2026-02-10 20:42:36] ✅ Forecast: SUCCESS
+[2026-02-10 20:42:36] 
+🎯 Overall: 5/5 steps completed successfully
+[2026-02-10 20:42:36] ✅ PIPELINE COMPLETE - ALL SYSTEMS OPERATIONAL
+[2026-02-10 20:54:49] 
+======================================================================
+[2026-02-10 20:54:49] 🚀 AUTOMATED PIPELINE EXECUTION
+[2026-02-10 20:54:49] ======================================================================
+[2026-02-10 20:54:49] Started: 2026-02-10 20:54:49
+[2026-02-10 20:54:49] 
+======================================================================
+[2026-02-10 20:54:49] ▶️  Running: Step 1: Update market data (SPX, VIX, yields)
+[2026-02-10 20:54:49] ======================================================================
+[2026-02-10 20:54:51] ✅ Step 1: Update market data (SPX, VIX, yields) - SUCCESS
+[2026-02-10 20:54:51] 
+======================================================================
+[2026-02-10 20:54:51] ▶️  Running: Step 2: Detect Fed events and rate changes
+[2026-02-10 20:54:51] ======================================================================
+[2026-02-10 20:54:51] ✅ Step 2: Detect Fed events and rate changes - SUCCESS
+[2026-02-10 20:54:51] 
+======================================================================
+[2026-02-10 20:54:51] ▶️  Running: Step 3: Join events with market data
+[2026-02-10 20:54:51] ======================================================================
+[2026-02-10 20:54:52] ✅ Step 3: Join events with market data - SUCCESS
+[2026-02-10 20:54:52] 
+======================================================================
+[2026-02-10 20:54:52] ▶️  Running: Step 4: Generate historical narrative visualization
+[2026-02-10 20:54:52] ======================================================================
+[2026-02-10 20:54:53] ✅ Step 4: Generate historical narrative visualization - SUCCESS
+[2026-02-10 20:54:53] 
+📅 Next FOMC meeting: 2026-03-18 (35 days)
+[2026-02-10 20:54:53] 🔮 Running forecast update...
+[2026-02-10 20:54:53] 
+======================================================================
+[2026-02-10 20:54:53] ▶️  Running: Step 5: Update forecast for next FOMC meeting
+[2026-02-10 20:54:53] ======================================================================
+[2026-02-10 20:54:55] ✅ Step 5: Update forecast for next FOMC meeting - SUCCESS
+[2026-02-10 20:54:55] 
+======================================================================
+[2026-02-10 20:54:55] 📊 PIPELINE SUMMARY
+[2026-02-10 20:54:55] ======================================================================
+[2026-02-10 20:54:55] ✅ Market Data: SUCCESS
+[2026-02-10 20:54:55] ✅ Fed Events: SUCCESS
+[2026-02-10 20:54:55] ✅ Join Data: SUCCESS
+[2026-02-10 20:54:55] ✅ Plot Narrative: SUCCESS
+[2026-02-10 20:54:55] ✅ Forecast: SUCCESS
+[2026-02-10 20:54:55] 
+🎯 Overall: 5/5 steps completed successfully
+[2026-02-10 20:54:55] ✅ PIPELINE COMPLETE - ALL SYSTEMS OPERATIONAL
+[2026-02-10 21:01:28] 
+======================================================================
+[2026-02-10 21:01:28] 🚀 AUTOMATED PIPELINE EXECUTION
+[2026-02-10 21:01:28] ======================================================================
+[2026-02-10 21:01:28] Started: 2026-02-10 21:01:28
+[2026-02-10 21:01:28] 
+======================================================================
+[2026-02-10 21:01:28] ▶️  Running: Step 1: Update market data (SPX, VIX, yields)
+[2026-02-10 21:01:28] ======================================================================
+[2026-02-10 21:01:30] ✅ Step 1: Update market data (SPX, VIX, yields) - SUCCESS
+[2026-02-10 21:01:30] 
+======================================================================
+[2026-02-10 21:01:30] ▶️  Running: Step 2: Detect Fed events and rate changes
+[2026-02-10 21:01:30] ======================================================================
+[2026-02-10 21:01:30] ✅ Step 2: Detect Fed events and rate changes - SUCCESS
+[2026-02-10 21:01:30] 
+======================================================================
+[2026-02-10 21:01:30] ▶️  Running: Step 3: Join events with market data
+[2026-02-10 21:01:30] ======================================================================
+[2026-02-10 21:01:31] ✅ Step 3: Join events with market data - SUCCESS
+[2026-02-10 21:01:31] 
+======================================================================
+[2026-02-10 21:01:31] ▶️  Running: Step 4: Generate historical narrative visualization
+[2026-02-10 21:01:31] ======================================================================
+[2026-02-10 21:01:32] ✅ Step 4: Generate historical narrative visualization - SUCCESS
+[2026-02-10 21:01:32] 
+📅 Next FOMC meeting: 2026-03-18 (35 days)
+[2026-02-10 21:01:32] 🔮 Running forecast update...
+[2026-02-10 21:01:32] 
+======================================================================
+[2026-02-10 21:01:32] ▶️  Running: Step 5: Update forecast for next FOMC meeting
+[2026-02-10 21:01:32] ======================================================================
+[2026-02-10 21:01:34] ✅ Step 5: Update forecast for next FOMC meeting - SUCCESS
+[2026-02-10 21:01:34] 
+======================================================================
+[2026-02-10 21:01:34] 📊 PIPELINE SUMMARY
+[2026-02-10 21:01:34] ======================================================================
+[2026-02-10 21:01:34] ✅ Market Data: SUCCESS
+[2026-02-10 21:01:34] ✅ Fed Events: SUCCESS
+[2026-02-10 21:01:34] ✅ Join Data: SUCCESS
+[2026-02-10 21:01:34] ✅ Plot Narrative: SUCCESS
+[2026-02-10 21:01:34] ✅ Forecast: SUCCESS
+[2026-02-10 21:01:34] 
+🎯 Overall: 5/5 steps completed successfully
+[2026-02-10 21:01:34] ✅ PIPELINE COMPLETE - ALL SYSTEMS OPERATIONAL
+[2026-02-11 11:54:27] 
+======================================================================
+[2026-02-11 11:54:27] 🚀 AUTOMATED PIPELINE EXECUTION
+[2026-02-11 11:54:27] ======================================================================
+[2026-02-11 11:54:27] Started: 2026-02-11 11:54:27
+[2026-02-11 11:54:27] 
+======================================================================
+[2026-02-11 11:54:27] ▶️  Running: Step 1: Update market data (SPX, VIX, yields)
+[2026-02-11 11:54:27] ======================================================================
+[2026-02-11 11:54:31] ✅ Step 1: Update market data (SPX, VIX, yields) - SUCCESS
+[2026-02-11 11:54:31] 
+======================================================================
+[2026-02-11 11:54:31] ▶️  Running: Step 2: Detect Fed events and rate changes
+[2026-02-11 11:54:31] ======================================================================
+[2026-02-11 11:54:32] ✅ Step 2: Detect Fed events and rate changes - SUCCESS
+[2026-02-11 11:54:32] 
+======================================================================
+[2026-02-11 11:54:32] ▶️  Running: Step 3: Join events with market data
+[2026-02-11 11:54:32] ======================================================================
+[2026-02-11 11:54:32] ✅ Step 3: Join events with market data - SUCCESS
+[2026-02-11 11:54:32] 
+======================================================================
+[2026-02-11 11:54:32] ▶️  Running: Step 4: Generate historical narrative visualization
+[2026-02-11 11:54:32] ======================================================================
+[2026-02-11 11:54:35] ✅ Step 4: Generate historical narrative visualization - SUCCESS
+[2026-02-11 11:54:35] 
+📅 Next FOMC meeting: 2026-03-18 (34 days)
+[2026-02-11 11:54:35] 🔮 Running forecast update...
+[2026-02-11 11:54:35] 
+======================================================================
+[2026-02-11 11:54:35] ▶️  Running: Step 5: Update forecast for next FOMC meeting
+[2026-02-11 11:54:35] ======================================================================
+[2026-02-11 11:54:37] ✅ Step 5: Update forecast for next FOMC meeting - SUCCESS
+[2026-02-11 11:54:37] 
+======================================================================
+[2026-02-11 11:54:37] 📊 PIPELINE SUMMARY
+[2026-02-11 11:54:37] ======================================================================
+[2026-02-11 11:54:37] ✅ Market Data: SUCCESS
+[2026-02-11 11:54:37] ✅ Fed Events: SUCCESS
+[2026-02-11 11:54:37] ✅ Join Data: SUCCESS
+[2026-02-11 11:54:37] ✅ Plot Narrative: SUCCESS
+[2026-02-11 11:54:37] ✅ Forecast: SUCCESS
+[2026-02-11 11:54:37] 
+🎯 Overall: 5/5 steps completed successfully
+[2026-02-11 11:54:37] ✅ PIPELINE COMPLETE - ALL SYSTEMS OPERATIONAL
+[2026-02-11 11:57:12] 
+======================================================================
+[2026-02-11 11:57:12] 🚀 AUTOMATED PIPELINE EXECUTION
+[2026-02-11 11:57:12] ======================================================================
+[2026-02-11 11:57:12] Started: 2026-02-11 11:57:12
+[2026-02-11 11:57:12] 
+======================================================================
+[2026-02-11 11:57:12] ▶️  Running: Step 1: Update market data (SPX, VIX, yields)
+[2026-02-11 11:57:12] ======================================================================
+[2026-02-11 11:57:15] ✅ Step 1: Update market data (SPX, VIX, yields) - SUCCESS
+[2026-02-11 11:57:15] 
+======================================================================
+[2026-02-11 11:57:15] ▶️  Running: Step 2: Detect Fed events and rate changes
+[2026-02-11 11:57:15] ======================================================================
+[2026-02-11 11:57:16] ✅ Step 2: Detect Fed events and rate changes - SUCCESS
+[2026-02-11 11:57:16] 
+======================================================================
+[2026-02-11 11:57:16] ▶️  Running: Step 3: Join events with market data
+[2026-02-11 11:57:16] ======================================================================
+[2026-02-11 11:57:16] ✅ Step 3: Join events with market data - SUCCESS
+[2026-02-11 11:57:16] 
+======================================================================
+[2026-02-11 11:57:16] ▶️  Running: Step 4: Generate historical narrative visualization
+[2026-02-11 11:57:16] ======================================================================
+[2026-02-11 11:57:18] ✅ Step 4: Generate historical narrative visualization - SUCCESS
+[2026-02-11 11:57:18] 
+📅 Next FOMC meeting: 2026-03-18 (34 days)
+[2026-02-11 11:57:18] 🔮 Running forecast update...
+[2026-02-11 11:57:18] 
+======================================================================
+[2026-02-11 11:57:18] ▶️  Running: Step 5a: Generate dynamic forecast for next meeting
+[2026-02-11 11:57:18] ======================================================================
+[2026-02-11 11:57:24] ✅ Step 5a: Generate dynamic forecast for next meeting - SUCCESS
+[2026-02-11 11:57:24] 
+======================================================================
+[2026-02-11 11:57:24] ▶️  Running: Step 5b: Generate ensemble forecast
+[2026-02-11 11:57:24] ======================================================================
+[2026-02-11 11:57:26] ❌ Step 5b: Generate ensemble forecast - FAILED
+[2026-02-11 11:57:26] Error: Traceback (most recent call last):
+  File "/Users/nguyenviethung/Desktop/macro-event-tracker/src/forecast_ensemble.py", line 233, in <module>
+    main()
+  File "/Users/nguyenviethung/Desktop/macro-event-tracker/src/forecast_ensemble.py", line 159, in main
+    ensemble, fundamental, cme, signals = forecaster.get_ensemble_forecast(df)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nguyenviethung/Desktop/macro-event-tracker/src/forecast_ensemble.py", line 55, in get_ensemble_forecast
+    'maintain': cme_probs.get('maintain', 50),
+                ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+
+[2026-02-11 11:57:26] 
+======================================================================
+[2026-02-11 11:57:26] ▶️  Running: Step 6: Generate Economic vs CME Market comparison chart
+[2026-02-11 11:57:26] ======================================================================
+[2026-02-11 11:57:32] ✅ Step 6: Generate Economic vs CME Market comparison chart - SUCCESS
+[2026-02-11 11:57:32] 
+======================================================================
+[2026-02-11 11:57:32] 📊 PIPELINE SUMMARY
+[2026-02-11 11:57:32] ======================================================================
+[2026-02-11 11:57:32] ✅ Market Data: SUCCESS
+[2026-02-11 11:57:32] ✅ Fed Events: SUCCESS
+[2026-02-11 11:57:32] ✅ Join Data: SUCCESS
+[2026-02-11 11:57:32] ✅ Plot Narrative: SUCCESS
+[2026-02-11 11:57:32] ✅ Forecast Dynamic: SUCCESS
+[2026-02-11 11:57:32] ❌ Forecast Ensemble: FAILED
+[2026-02-11 11:57:32] ✅ Comparison Chart: SUCCESS
+[2026-02-11 11:57:32] 
+🎯 Overall: 6/7 steps completed successfully
+[2026-02-11 11:57:32] ⚠️  PIPELINE COMPLETE - SOME WARNINGS
+[2026-02-11 11:58:31] 
+======================================================================
+[2026-02-11 11:58:31] 🚀 AUTOMATED PIPELINE EXECUTION
+[2026-02-11 11:58:31] ======================================================================
+[2026-02-11 11:58:31] Started: 2026-02-11 11:58:31
+[2026-02-11 11:58:31] 
+======================================================================
+[2026-02-11 11:58:31] ▶️  Running: Step 1: Update market data (SPX, VIX, yields)
+[2026-02-11 11:58:31] ======================================================================
+[2026-02-11 11:58:33] ✅ Step 1: Update market data (SPX, VIX, yields) - SUCCESS
+[2026-02-11 11:58:33] 
+======================================================================
+[2026-02-11 11:58:33] ▶️  Running: Step 2: Detect Fed events and rate changes
+[2026-02-11 11:58:33] ======================================================================
+[2026-02-11 11:58:34] ✅ Step 2: Detect Fed events and rate changes - SUCCESS
+[2026-02-11 11:58:34] 
+======================================================================
+[2026-02-11 11:58:34] ▶️  Running: Step 3: Join events with market data
+[2026-02-11 11:58:34] ======================================================================
+[2026-02-11 11:58:34] ✅ Step 3: Join events with market data - SUCCESS
+[2026-02-11 11:58:34] 
+======================================================================
+[2026-02-11 11:58:34] ▶️  Running: Step 4: Generate historical narrative visualization
+[2026-02-11 11:58:34] ======================================================================
+[2026-02-11 11:58:36] ✅ Step 4: Generate historical narrative visualization - SUCCESS
+[2026-02-11 11:58:36] 
+📅 Next FOMC meeting: 2026-03-18 (34 days)
+[2026-02-11 11:58:36] 🔮 Running forecast update...
+[2026-02-11 11:58:36] 
+======================================================================
+[2026-02-11 11:58:36] ▶️  Running: Step 5a: Generate dynamic forecast for next meeting
+[2026-02-11 11:58:36] ======================================================================
+[2026-02-11 11:58:38] ✅ Step 5a: Generate dynamic forecast for next meeting - SUCCESS
+[2026-02-11 11:58:38] 
+======================================================================
+[2026-02-11 11:58:38] ▶️  Running: Step 5b: Generate ensemble forecast
+[2026-02-11 11:58:38] ======================================================================
+[2026-02-11 11:58:40] ❌ Step 5b: Generate ensemble forecast - FAILED
+[2026-02-11 11:58:40] Error: Traceback (most recent call last):
+  File "/Users/nguyenviethung/Desktop/macro-event-tracker/src/forecast_ensemble.py", line 233, in <module>
+    main()
+  File "/Users/nguyenviethung/Desktop/macro-event-tracker/src/forecast_ensemble.py", line 159, in main
+    ensemble, fundamental, cme, signals = forecaster.get_ensemble_forecast(df)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nguyenviethung/Desktop/macro-event-tracker/src/forecast_ensemble.py", line 55, in get_ensemble_forecast
+    'maintain': cme_probs.get('maintain', 50),
+                ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+
+[2026-02-11 11:58:40] 
+======================================================================
+[2026-02-11 11:58:40] ▶️  Running: Step 6: Generate Economic vs CME Market comparison chart
+[2026-02-11 11:58:40] ======================================================================
+[2026-02-11 11:58:43] ✅ Step 6: Generate Economic vs CME Market comparison chart - SUCCESS
+[2026-02-11 11:58:43] 
+======================================================================
+[2026-02-11 11:58:43] 📊 PIPELINE SUMMARY
+[2026-02-11 11:58:43] ======================================================================
+[2026-02-11 11:58:43] ✅ Market Data: SUCCESS
+[2026-02-11 11:58:43] ✅ Fed Events: SUCCESS
+[2026-02-11 11:58:43] ✅ Join Data: SUCCESS
+[2026-02-11 11:58:43] ✅ Plot Narrative: SUCCESS
+[2026-02-11 11:58:43] ✅ Forecast Dynamic: SUCCESS
+[2026-02-11 11:58:43] ❌ Forecast Ensemble: FAILED
+[2026-02-11 11:58:43] ✅ Comparison Chart: SUCCESS
+[2026-02-11 11:58:43] 
+🎯 Overall: 6/7 steps completed successfully
+[2026-02-11 11:58:43] ⚠️  PIPELINE COMPLETE - SOME WARNINGS
