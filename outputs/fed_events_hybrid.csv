@@ -1,0 +1,49 @@
+event_date,event_name,category,subtype,rate,change_bps,notes
+2021-01-27,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2021-03-17,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2021-04-28,Rate Cut -1bps,Monetary Policy,Rate Cut,0.06,-1.0,FOMC meeting date + FEDFUNDS rate data
+2021-06-16,Rate Hike +2bps,Monetary Policy,Rate Hike,0.08,2.0,FOMC meeting date + FEDFUNDS rate data
+2021-07-28,Rate Cut -1bps,Monetary Policy,Rate Cut,0.09,-1.0,FOMC meeting date + FEDFUNDS rate data
+2021-09-22,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2021-11-03,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2021-12-15,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2022-01-26,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2022-03-16,Rate Hike +12bps,Monetary Policy,Rate Hike,0.2,12.0,FOMC meeting date + FEDFUNDS rate data
+2022-05-04,Rate Hike +44bps,Monetary Policy,Rate Hike,0.77,44.0,FOMC meeting date + FEDFUNDS rate data
+2022-06-15,Rate Hike +44bps,Monetary Policy,Rate Hike,1.21,44.0,FOMC meeting date + FEDFUNDS rate data
+2022-07-27,Rate Hike +65bps (Large),Monetary Policy,Rate Hike (Large),2.33,65.0,FOMC meeting date + FEDFUNDS rate data
+2022-09-21,Rate Hike +52bps (Large),Monetary Policy,Rate Hike (Large),3.08,52.0,FOMC meeting date + FEDFUNDS rate data
+2022-11-02,Rate Hike +70bps (Large),Monetary Policy,Rate Hike (Large),3.78,70.0,FOMC meeting date + FEDFUNDS rate data
+2022-12-14,Rate Hike +32bps,Monetary Policy,Rate Hike,4.1,32.0,FOMC meeting date + FEDFUNDS rate data
+2023-02-01,Rate Hike +24bps,Monetary Policy,Rate Hike,4.57,24.0,FOMC meeting date + FEDFUNDS rate data
+2023-03-22,Rate Hike +18bps,Monetary Policy,Rate Hike,4.83,18.0,FOMC meeting date + FEDFUNDS rate data
+2023-05-03,Rate Hike +23bps,Monetary Policy,Rate Hike,5.06,23.0,FOMC meeting date + FEDFUNDS rate data
+2023-06-14,Rate Hike +2bps,Monetary Policy,Rate Hike,5.08,2.0,FOMC meeting date + FEDFUNDS rate data
+2023-07-26,Rate Hike +21bps,Monetary Policy,Rate Hike,5.33,21.0,FOMC meeting date + FEDFUNDS rate data
+2023-09-20,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2023-11-01,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2023-12-13,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2024-01-31,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2024-03-20,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2024-05-01,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2024-06-12,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2024-07-31,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2024-09-18,Rate Cut -30bps,Monetary Policy,Rate Cut,4.83,-30.0,FOMC meeting date + FEDFUNDS rate data
+2024-11-07,Rate Cut -19bps,Monetary Policy,Rate Cut,4.64,-19.0,FOMC meeting date + FEDFUNDS rate data
+2024-12-18,Rate Cut -15bps,Monetary Policy,Rate Cut,4.33,-15.0,FOMC meeting date + FEDFUNDS rate data
+2025-01-29,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2025-03-19,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2025-05-07,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2025-06-18,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2025-07-30,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2025-09-17,Rate Cut -13bps,Monetary Policy,Rate Cut,4.09,-13.0,FOMC meeting date + FEDFUNDS rate data
+2025-10-29,Rate Cut -21bps,Monetary Policy,Rate Cut,3.88,-21.0,FOMC meeting date + FEDFUNDS rate data
+2025-12-10,Rate Cut -16bps,Monetary Policy,Rate Cut,3.72,-16.0,FOMC meeting date + FEDFUNDS rate data
+2026-01-28,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2026-03-18,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2026-04-29,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2026-06-17,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2026-07-29,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2026-09-16,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2026-10-28,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data
+2026-12-16,FOMC Meeting (No Change),Monetary Policy,No Change,,,FOMC meeting date + FEDFUNDS rate data

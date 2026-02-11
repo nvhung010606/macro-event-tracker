@@ -1,0 +1,72 @@
+[2026-02-10 19:00:10] 
+======================================================================
+[2026-02-10 19:00:10] 🚀 AUTOMATED PIPELINE EXECUTION
+[2026-02-10 19:00:10] ======================================================================
+[2026-02-10 19:00:10] Started: 2026-02-10 19:00:10
+[2026-02-10 19:00:10] 
+======================================================================
+[2026-02-10 19:00:10] ▶️  Running: Step 1: Update market data (SPX, VIX, yields)
+[2026-02-10 19:00:10] ======================================================================
+[2026-02-10 19:00:13] ❌ Step 1: Update market data (SPX, VIX, yields) - FAILED
+[2026-02-10 19:00:13] Error: Traceback (most recent call last):
+  File "/Users/nguyenviethung/Desktop/macro-event-tracker/src/update_market_data.py", line 199, in <module>
+    main()
+  File "/Users/nguyenviethung/Desktop/macro-event-tracker/src/update_market_data.py", line 195, in main
+    success = update_market_data()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nguyenviethung/Desktop/macro-event-tracker/src/update_market_data.py", line 149, in update_market_data
+    df = pd.DataFrame({
+         ^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/frame.py", line 778, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 503, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ, consolidate=copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 114, in arrays_to_mgr
+    index = _extract_index(arrays)
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/internals/construction.py", line 664, in _extract_index
+    raise ValueError("Per-column arrays must each be 1-dimensional")
+ValueError: Per-column arrays must each be 1-dimensional
+
+[2026-02-10 19:00:13] 
+⚠️  Market data update failed - continuing anyway...
+[2026-02-10 19:00:13] 
+======================================================================
+[2026-02-10 19:00:13] ▶️  Running: Step 2: Detect Fed events and rate changes
+[2026-02-10 19:00:13] ======================================================================
+[2026-02-10 19:00:14] ❌ Step 2: Detect Fed events and rate changes - FAILED
+[2026-02-10 19:00:14] Error: Missing FRED_API_KEY. In the terminal run:
+export FRED_API_KEY='YOUR_KEY'
+
+[2026-02-10 19:00:14] 
+======================================================================
+[2026-02-10 19:00:14] ▶️  Running: Step 3: Join events with market data
+[2026-02-10 19:00:14] ======================================================================
+[2026-02-10 19:00:14] ✅ Step 3: Join events with market data - SUCCESS
+[2026-02-10 19:00:14] 
+======================================================================
+[2026-02-10 19:00:14] ▶️  Running: Step 4: Generate historical narrative visualization
+[2026-02-10 19:00:14] ======================================================================
+[2026-02-10 19:00:16] ✅ Step 4: Generate historical narrative visualization - SUCCESS
+[2026-02-10 19:00:16] 
+📅 Next FOMC meeting: 2026-03-18 (35 days)
+[2026-02-10 19:00:16] 🔮 Running forecast update...
+[2026-02-10 19:00:16] 
+======================================================================
+[2026-02-10 19:00:16] ▶️  Running: Step 5: Update forecast for next FOMC meeting
+[2026-02-10 19:00:16] ======================================================================
+[2026-02-10 19:00:19] ✅ Step 5: Update forecast for next FOMC meeting - SUCCESS
+[2026-02-10 19:00:19] 
+======================================================================
+[2026-02-10 19:00:19] 📊 PIPELINE SUMMARY
+[2026-02-10 19:00:19] ======================================================================
+[2026-02-10 19:00:19] ❌ Market Data: FAILED
+[2026-02-10 19:00:19] ❌ Fed Events: FAILED
+[2026-02-10 19:00:19] ✅ Join Data: SUCCESS
+[2026-02-10 19:00:19] ✅ Plot Narrative: SUCCESS
+[2026-02-10 19:00:19] ✅ Forecast: SUCCESS
+[2026-02-10 19:00:19] 
+🎯 Overall: 3/5 steps completed successfully
+[2026-02-10 19:00:19] ❌ PIPELINE FAILED - CRITICAL ERRORS
