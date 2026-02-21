@@ -26,6 +26,8 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
+  html { scroll-behavior: smooth; }
+
   body {
     background: var(--bg);
     color: var(--ink);
@@ -172,6 +174,11 @@
   .section-rule.heavy {
     border-top: 2px solid var(--ink);
     margin: 4rem 0 3rem;
+    scroll-margin-top: 4rem;
+  }
+
+  [id] {
+    scroll-margin-top: 4rem;
   }
 
   .kicker {
